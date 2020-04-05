@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EmbeddedFontsTest.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonts="clr-namespace:EmbeddedFontsTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackLayout>
+        <!--  Place new controls here  -->
+        <Image
+            Grid.Column="2"
+            HeightRequest="44"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="44">
+            <Image.Source>
+                <FontImageSource
+                    FontFamily="fontello"
+                    Glyph="{x:Static fonts:IconFont.Music}"
+                    Size="44"
+                    Color="Green" />
+            </Image.Source>
+        </Image>
+        <Label
+            FontFamily="fontello"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="{x:Static fonts:IconFont.Music}"
+            TextColor="Blue"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            TextColor="Red"
+            VerticalOptions="CenterAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontSize="Large" Text="こんにちは,世界!" />
+                    <Span
+                        FontFamily="fontello"
+                        FontSize="Large"
+                        Text="&#xE804;" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label
+            FontFamily="fontello"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="こんにちは,絶対! &#xE804;"
+            TextColor="Red"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontFamily="KswBasakoro"
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            Text="ばさころフォント"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontFamily="ipam"
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            Text="IPA明朝フォント"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontFamily="CuteFont-Regular"
+            HorizontalOptions="CenterAndExpand"
+            Text="Hello Embedded Fonts"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label
+            FontFamily="Bellota"
+            HorizontalOptions="CenterAndExpand"
+            Text="Hello Embedded Fonts"
+            VerticalOptions="CenterAndExpand" />
+
+    </StackLayout>
+
+</ContentPage>
